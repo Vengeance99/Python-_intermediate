@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+
 dict1={"name":['a','b','c','d'],"marks":[100,50,60,70],"city":['x','y','z','q']}
 # print(dict1)
 df=pd.DataFrame(dict1)
@@ -15,7 +16,17 @@ print(df.describe())
 #reading data from a csv file
 temp=pd.read_csv('test.csv')
 print(temp)
-print(temp['price'][0])
+print([i for i in temp['train.no']])
 #custom indexing
 temp.index=['i','ii','iii','iv']
 print(temp)
+
+#to read and write .xlsx file
+'''
+install dependencies
+pip install openpyxl xlsxwriter xlrd
+to read from excel:
+df.to_excel('panda1.xlsx',index=False)
+to write to excel:
+pd.read_excel('./grades.xlsx')
+'''
